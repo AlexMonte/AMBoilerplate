@@ -12,6 +12,7 @@
     "remove": "^0.1.5"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "babel": "^6.23.0",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",

@@ -1,32 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/main.min.css" media="screen">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>AMBoilerplate - A Personal SCSS Boilerplate for web designing</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/main.min.css" media="screen">
 </head>
+
 <body>
-  <header>
-    
-    <nav>
-      <span class="brand">logo</span>
-      <a href="#"> link</a>
-      <a href="#"> link</a>
-      <a href="#"> link</a>
-      <a href="#"> link</a>
-    </nav>
-  <h1>Heading 1 </h1>
-  <h2>Heading 1 </h2>
-  <h3>Heading 1 </h3>
-  <h4>Heading 1 </h4>
-  <h5>Heading 1 </h5>
+	<div class="container">
+
+		<h1>AMBoiler</h1>
+		<h2>A Personal SCSS Boilerplate for web designing</h2>
+
+		<hr>
+
+		<h1>Heading 1</h1>
+		<h2>Heading 2</h2>
+		<h3>Heading 3</h3>
+		<h4>Heading 4</h4>
+		<h5>Heading 5</h5>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lectus purus, dignissim vitae sapien quis, ornare lobortis mi. Maecenas vel dui efficitur, iaculis mi at, sodales turpis. Aenean at condimentum leo, nec dapibus risus. Nam suscipit est ac dignissim volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla iaculis tempor dui a mollis.</p>
+		<p class="muted">Subtle hint</p>
+		<p><a href="">Link text</a></p>
+		<blockquote><p>You're good. Get better. Stop asking for things.</p></blockquote>
+		<pre>&lt;script&gt;Some code block&lt;/script&gt;</pre>
+		<p>Some <code>&lt;inline code&gt;</code> instead.</p>
+
+		<hr>
+
+		<h2>Buttons</h2>
+
+		<p><button class="btn btn-primary">Primary button</button> <button class="btn">Default button</button> <button class="btn btn-link">Link button</button> </p>
+
+		<p><button class="btn btn-primary btn-lg">Large button</button> <button class="btn btn-sm">Small button</button></p>
+
+		<hr>
+
+		<h2>Notifications/Alerts</h2>
+
+		<div class="alert danger">
+			<p>There was a problem.</p>
+		</div>
+
+		<div class="alert success">
+			<p>Successs! Something succeeded.</p>
+		</div>
+
+		<div class="alert warning">
+			<p>Watch out, here's a warning.</p>
+		</div>
+
+		<div class="alert info text-center">
+			<p>Here's some useful information. Text aligned center.</p>
+		</div>
+
+		<div class="alert empty">
+			<p>This is an empty state. You should probably add something to get started.</p>
+		</div>
+
+		<hr>
+
+		<h2>Lists</h2>
+		<ul>
+			<li>Option 1</li>
+			<li>Option 2</li>
+			<li>Option 3</li>
+		</ul>
+		<ol>
+			<li>Option 1</li>
+			<li>Option 2</li>
+			<li>Option 3</li>
+		</ol>
+		<ul class="list-unstyled">
+			<li>Option 1</li>
+			<li>Option 2</li>
+			<li>Option 3</li>
+		</ul>
+
+		<hr>
+
+		<h2>Navigation</h2>
+		<nav>
+			<a href="">Nav Item 1</a>
+			<a href="">Nav Item 2</a>
+			<a href="">Nav Item 3</a>
+		</nav>
+
+		<hr>
+
+		<h2>Tables</h2>
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">Column 1</th>
+					<th scope="col">Column 2</th>
+					<th scope="col" class="text-right">Column 3</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Data 1</td>
+					<td>Data 2</td>
+					<td class="text-right">Data 3</td>
+				</tr>
+				<tr>
+					<td>Data 1</td>
+					<td>Data 2</td>
+					<td class="text-right">Data 3</td>
+				</tr>
+				<tr>
+					<td>Data 1</td>
+					<td>Data 2</td>
+					<td class="text-right">Data 3</td>
+				</tr>
+				<tr>
+					<td>Data 1</td>
+					<td>Data 2</td>
+					<td class="text-right">Data 3</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<hr>
+
+		<h2>Forms</h2>
+		<form>
+			<div class="field">
+				<label for="">Text label</label>
+				<input type="text">
+				<p class="hint">Hint/help</p>
+			</div>
+			<div class="field">
+				<label for="">Email</label>
+				<input type="email">
+			</div>
+			<div class="field">
+				<label for="">Search</label>
+				<input type="search">
+			</div>
+			<div class="field">
+				<label for="">Password <span class="is-required">(required)</span></label>
+				<input type="password">
+			</div>
+			<div class="field has-error">
+				<label for="">Text label <span class="req">(required)</span></label>
+				<input type="text">
+				<p class="error-description">This field is required</p>
+			</div>
+			<div class="field">
+				<label for="">Textarea</label>
+				<textarea></textarea>
+			</div>
+			<div class="field">
+				<label for="">Full width</label>
+				<input type="text" class="full-width">
+			</div>
+			<div class="field">
+				<label><input type="checkbox"> Option 1</label>
+				<label><input type="checkbox"> Option 2</label>
+				<label><input type="checkbox"> Option 3</label>
+			</div>
+			<div class="field">
+				<label><input type="radio" name="radio"> Option 1</label>
+				<label><input type="radio" name="radio"> Option 2</label>
+				<label><input type="radio" name="radio"> Option 3</label>
+			</div>
+			<button>Submit</button>
+		</form>
+		<input type="text"> <button class="btn btn-primary">Submit</button>
+
+		<hr>
+    <section class="container-limited"></section>
+		<h2>Responsive Grid</h2>
+  
 
 
-  </header>
-  <section class="container-limited">
-
-    
     <div class="row">
       <div class="col-1D-5">Col #5</div>
       <div class="col-1D-1">Col #1</div>
@@ -48,9 +205,50 @@
       <div class="col-2D-1">Col #1</div>
     </div>
   </section>
-  <footer>
+  <h2>Images</h2>
+		<!-- Example using picture element -->
+		<div class="group">
+			<div class="span12">
+				<picture>
+					<source media="(min-width: 1000px)" srcset="img/cat@2x.jpg">
+					<source media="(min-width: 640px)" srcset="img/cat.jpg">
+					<img src="img/cat@2x.jpg" alt="Cat">
+				</picture>
+			</div>
+		</div>
+
+		<!-- Examples using srcset -->
+		<div class="group">
+			<div class="span6">
+				<img src="img/cat.jpg" alt="Cat" srcset="img/cat@2x.jpg 2x, img/cat.jpg 1x" sizes="(min-width:480px) 100vw, 50vw">
+			</div>
+			<div class="span4">
+				<img src="img/cat.jpg" alt="Cat" srcset="img/cat@2x.jpg 2x, img/cat.jpg 1x" sizes="(min-width:480px) 100vw, 50vw">
+			</div>
+			<div class="span2">
+				<img src="img/cat.jpg" alt="Cat" srcset="img/cat@2x.jpg 2x, img/cat.jpg 1x" sizes="(min-width:480px) 100vw, 50vw">
+			</div>
+		</div>
+
+		<hr>
+
+		<h2>Icons</h2>
+
+		<i class="fa fa-cog"></i>
+		<i class="fa fa-download-alt fa-3x"></i>
+		<i class="fa fa-github-alt fa-rotate-90"></i>
+		<i class="fa fa-remove-sign fa-5x"></i>
+		<i class="fa fa-apple"></i>
+		<i class="fa fa-android fa-muted"></i>
+		<i class="fa fa-cloud fa-border"></i>
+		<i class="fa fa-comment"></i>
+		<i class="fa fa-star"></i>
+		<i class="fa fa-gamepad"></i>
+
+		<p><a href="http://fortawesome.github.io/Font-Awesome/cheatsheet/">More icons</a></p>
 
 
-  </footer>
+	</div>
+
 </body>
 </html>

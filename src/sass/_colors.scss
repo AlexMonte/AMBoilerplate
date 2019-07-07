@@ -1,0 +1,272 @@
+
+//Color Tints 
+
+//White Tints
+$white-100: #fcfcfc;
+$white-200: #c3cbdb;
+$white-300: #a096d1;
+$white-400: #62507e;
+$white-500: #544379;
+$white-600: #443a72;
+
+$whites: () !default;
+
+$whites: map-merge((
+    "100": $white-100,
+    "200": $white-200,
+    "300": $white-300,
+    "400": $white-400,
+    "500": $white-500,
+    "600": $white-600
+    ),
+    $whites
+);
+//Black Tints
+$black-100: #424556;
+$black-200: #252a32;
+$black-300: #14161f;
+$black-400: #0a0b0f;
+$black-500: #08090e;
+$black-600: #05080e;
+
+$blacks: () !default;
+
+$blacks: map-merge((
+    "100": $black-100,
+    "200": $black-200,
+    "300": $black-300,
+    "400": $black-400,
+    "500": $black-500,
+    "600": $black-600
+    ),
+    $blacks
+);
+//Gray tints
+$gray-100: #888c78;
+$gray-200: #585651;
+$gray-300: #453c3c;
+$gray-400: #32222e;
+$gray-500: #2e1c2b;
+$gray-600: #261828;
+
+$grays:  () !default;
+
+$grays: map-merge((
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600
+    ),
+    $grays
+);
+
+//Magenta Tints
+$magenta-100: #ff8f8f;
+$magenta-200: #ff2245;
+$magenta-300: #d50964;
+$magenta-400: #9c0565;
+$magenta-500: #7f095e;
+$magenta-600: #59125d;
+
+$magentas:   () !default;
+
+$magentas: map-merge((
+    "100": $magenta-100,
+    "200": $magenta-200,
+    "300": $magenta-300,
+    "400": $magenta-400,
+    "500": $magenta-500,
+    "600": $magenta-600
+    ),
+    $magentas
+);
+
+//Red Tints
+$red-100: #ffd800;
+$red-200: #ff9000;
+$red-300: #e93100;
+$red-400: #bf0000;
+$red-500: #9a0711;
+$red-600: #6b122d;
+
+$reds:  () !default;
+
+$reds: map-merge((
+    "100": $red-100,
+    "200": $red-200,
+    "300": $red-300,
+    "400": $red-400,
+    "500": $red-500,
+    "600": $red-600
+    ),
+    $reds
+);
+
+//Green Tints
+$green-100: #e5ff05;
+$green-200: #a7ed00;
+$green-300: #4ab907;
+$green-400: #0a5d45;
+$green-500: #085041;
+$green-600: #053f3e;
+
+$greens:  () !default;
+
+$greens: map-merge((
+    "100": $green-100,
+    "200": $green-200,
+    "300": $green-300,
+    "400": $green-400,
+    "500": $green-500,
+    "600": $green-600
+    ),
+    $greens
+);
+
+//Blue Tints
+$blue-100: #00fff0;
+$blue-200: #00b9ff;
+$blue-300: #008df0;
+$blue-400: #1664c5;
+$blue-500: #1257b3;
+$blue-600: #0e4ca1;
+
+$blues:  () !default;
+
+$blues: map-merge((
+    "100": $blue-100,
+    "200": $blue-200,
+    "300": $blue-300,
+    "400": $blue-400,
+    "500": $blue-500,
+    "600": $blue-600
+    ),
+    $blues
+);
+
+//Orange Tints
+$orange-100: #ffe822;
+$orange-200: #ffa939;
+$orange-300: #e56335;
+$orange-400: #e5233e;
+$orange-500: #c31e3e;
+$orange-600: #8c2755;
+
+$oranges:  () !default;
+
+$oranges: map-merge((
+    "100": $orange-100,
+    "200": $orange-200,
+    "300": $orange-300,
+    "400": $orange-400,
+    "500": $orange-500,
+    "600": $orange-600
+    ),
+    $oranges
+);
+
+//Yellow Tints
+$yellow-100: #fffc00;
+$yellow-200: #ebb70a;
+$yellow-300: #be8420;
+$yellow-400: #915816;
+$yellow-500: #784e1d;
+$yellow-600: #58422d;
+
+$yellows:  () !default;
+
+$yellows: map-merge((
+    "100": $yellow-100,
+    "200": $yellow-200,
+    "300": $yellow-300,
+    "400": $yellow-400,
+    "500": $yellow-500,
+    "600": $yellow-600
+    ),
+    $yellows
+);
+
+//Brown Tints
+$brown-100: #ffb35b;
+$brown-200: #d77e4b;
+$brown-300: #b15c51;
+$brown-400: #793d4e;
+$brown-500: #6b3347;
+$brown-600: #562f48;
+
+$browns:  () !default;
+
+$browns: map-merge((
+    "100": $brown-100,
+    "200": $brown-200,
+    "300": $brown-300,
+    "400": $brown-400,
+    "500": $brown-500,
+    "600": $brown-600
+    ),
+    $browns
+);
+//Purple Tints
+$purple-100: #ff70df;
+$purple-200: #ff22a9;
+$purple-300: #611381;
+$purple-400: #45064b;
+$purple-500: #390744;
+$purple-600: #290a3d;
+
+$purples:  () !default;
+
+$purples: map-merge((
+    "100": $purple-100,
+    "200": $purple-200,
+    "300": $purple-300,
+    "400": $purple-400,
+    "500": $purple-500,
+    "600": $purple-600
+    ),
+    $purples
+);
+//Teal Tints
+$teal-100: #ccfff5;
+$teal-200: #6df7b1;
+$teal-300: #00c19a;
+$teal-400: #017687;
+$teal-500: #01637a;
+$teal-600: #014f6c;
+
+$teals:  () !default;
+
+$teals: map-merge((
+    "100": $teal-100,
+    "200": $teal-200,
+    "300": $teal-300,
+    "400": $teal-400,
+    "500": $teal-500,
+    "600": $teal-600
+    ),
+    $teals
+);
+/*
+//
+$-100: ;
+$-200: ;
+$-300: ;
+$-400: ;
+$-500: ;
+$-600: ;
+
+:  () !default;
+
+$: map-merge((
+    "100": $-100,
+    "200": $-200,
+    "300": $-300,
+    "400": $-400,
+    "500": $-500,
+    "600": $-600
+    ),
+    $
+);
+*/

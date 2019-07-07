@@ -1,0 +1,57 @@
+//Sets up both 1D(flex) and 2D(grid) grids displays  
+
+$grid-1D-columns: 12;
+$grid-2D-columns: 12;
+$grid-2D-rows: 4;
+$grid-spacing: 3%;
+$grid-gutter-width: 1em;
+
+//common column properties
+
+%grid-column {
+    position: relative;
+    border: solid 1px #ddd;
+
+}
+
+.container-limited, .row {
+    @include container-create();
+    @include container-limited-create()
+    
+}
+.container, .grid-2D {
+    @include container-create();
+}
+
+
+
+.row {
+    display:flex;
+    flex-wrap: wrap; 
+
+    @for $col from 1 through $grid-1D-columns {
+    .col-1D-#{$col} {
+        flex: 0 0  (100% / ($grid-1D-columns/$col)) - ($grid-spacing * ($grid-1D-columns - $col) / $grid-2D-columns);
+        max-width:  (100% / ($grid-1D-columns/$col)) - ($grid-spacing * ($grid-1D-columns - $col) / $grid-2D-columns);
+    }
+} 
+[class^="col-1D-"] {
+        @extend %grid-column
+    }
+}
+
+@for $row from 1 through $grid-2D-rows  {
+        @for $col from 1 through $grid-2D-columns {
+            .grid-2D-#{$row}-#{$col} {
+                
+                grid-template-columns:repeat($col, #{$col}fr);
+                grid-template-rows:repeat($row, #{$row}fr); 
+                
+            }
+        }
+    }
+    [class^="grid-2D-"] {
+        display: grid;
+        width: 100%;
+        grid-gap: $grid-gutter-width;
+    }

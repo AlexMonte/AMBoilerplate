@@ -1,5 +1,5 @@
 # AMBoilerplate
-<<<<<<< HEAD
+
 
 This is a Boilerplate template I'm designing to increase the productivity of my work as well as increase my skills with Html, CSS/SCSS and Javascript.
 
@@ -24,5 +24,4 @@ The hardest part of this project... cause I don't know what to do with it outsid
 
 
 [Bootstrap]: <http://twitter.github.com/bootstrap/>
-=======
->>>>>>> 73675814e70fa45f44420251e36de0b3a8f71012
+

@@ -13,8 +13,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
-    "babel": "^6.23.0",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-changed": "^4.0.0",

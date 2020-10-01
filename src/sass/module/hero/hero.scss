@@ -1,0 +1,16 @@
+%hero {
+  background-position: center;
+  background-size: cover;
+  display: grid;
+}
+.hero {
+  @extend .screenBlock;
+  @extend %hero;
+  place-items: center;
+
+  &_left {
+    @extend .screenBlock;
+    @extend %hero;
+    place-items: left;
+  }
+}

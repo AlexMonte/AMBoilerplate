@@ -1,0 +1,35 @@
+/**
+ * AMBoilerplate uses a combination of the BEM, SMACSS and OOCSS organization styles
+ * Css styles are divided into a Base, Utility, Layout, Module and Theme category
+ *
+**/
+
+/**
+ * Base constains all base variables and defaut styling for all Elements 
+ *
+**/
+@import "base/index";
+
+/**
+ *Utilities contains presentational classes for quick prototyping
+ *
+**/
+@import "utility/index";
+
+/**
+ *Layouts are used to divide the page into sections, Used to contain modules.
+ *
+**/
+@import "layout/index";
+
+/**
+ *modules are all the reusable components of the page
+ *
+**/
+@import "module/index";
+
+/**
+ * Themes are use to add a final layer of consice styling to a page
+ * Mostly used when you want to incorporate different looks to a papge
+**/
+@import "theme/index.scss";

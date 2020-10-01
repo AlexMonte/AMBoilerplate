@@ -1,0 +1,4 @@
+.fixedBlock {
+  @include container-create();
+  @include container-limited-create();
+}

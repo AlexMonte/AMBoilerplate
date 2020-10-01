@@ -1,0 +1,61 @@
+// Base settings
+$max-widths: (
+  sm: 540,
+  md: 720,
+  lg: 960,
+  xl: 1140,
+);
+
+$breakpoints: (
+  xs: 0,
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+);
+
+$columns: 12;
+$spacing: 1.8%;
+$gutter-width: 1em;
+
+// Base Mixins
+
+//prepend an element to current selection
+@mixin prepend($element) {
+  @at-root #{$element + &} {
+    @content;
+  }
+}
+//Scafolding mixins
+@function breakpoint-min($name, $breakpoints: $breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+@mixin breakpoint-up($name, $breakpoints: $breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+//create container full width
+@mixin container-create($gutter: $gutter-width) {
+  width: 100%;
+  padding: 0 $gutter/2;
+  margin: 0 auto;
+}
+//create container that adjust to media breakpoints
+@mixin container-limited-create(
+  $width: $max-widths,
+  $breakpoints: $breakpoints
+) {
+  @each $breakpoint, $max-width in $width {
+    @include breakpoint-up($breakpoint, $breakpoints) {
+      max-width: $max-width;
+    }
+  }
+}

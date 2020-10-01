@@ -1,0 +1,64 @@
+//settings
+//create row for flex display
+@mixin flex-create($size, $column: $columns) {
+  flex: 0 0 percentage($size/$column);
+  max-width: percentage($size/$column);
+}
+
+%column {
+  position: relative;
+  border: solid 1px #ddd;
+  margin: 0 $gutter-width/2 $gutter-width;
+  padding: $spacing;
+}
+%flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.flexBlock {
+  @extend .block;
+  @extend %flex;
+
+  @for $col from 1 through $columns {
+    &_col-#{$col} {
+      @extend .block;
+
+      flex: 1
+        1
+        (100% / ($columns/$col)) -
+        ($spacing * ($columns - $col) / $columns);
+      max-width: (100% / ($columns/$col)) -
+        ($spacing * ($columns - $col) / $columns);
+    }
+  }
+  [class^="flexBlock_col"] {
+    @extend %column;
+  }
+
+  &_fixed {
+    @extend .fixedBlock;
+    @extend %flex;
+    @each $breakpoint, $max-width in $max-widths {
+      @include breakpoint-up($breakpoint, $breakpoints) {
+        @include flex-create($max-width);
+      }
+    }
+
+    @for $col from 1 through $columns {
+      &_col-#{$col} {
+        @extend .block;
+
+        flex: 0
+          1
+          (100% / ($columns/$col)) -
+          ($spacing * ($columns - $col) / $columns);
+        max-width: (100% / ($columns/$col)) -
+          ($spacing * ($columns - $col) / $columns);
+      }
+    }
+    [class^="flexBlock_col"] {
+      @extend %column;
+    }
+  }
+}

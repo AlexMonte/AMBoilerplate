@@ -1,0 +1,48 @@
+//imports
+@import "../../layout/signalBlock";
+
+//settings
+$success: map-get($greens, "200");
+$info: map-get($blues, "300");
+$warning: map-get($yellows, "100");
+$danger: map-get($reds, "400");
+/**
+Alerts
+**/
+%alert {
+  @extend %signalBlock;
+}
+.alert {
+  @extend %alert;
+  background-color: $primary;
+  border: 1px dashed map-get($grays, "100");
+  text-align: center;
+
+  &__danger {
+    @extend %alert;
+    background-color: lighten($danger, 20);
+    border-color: $danger;
+    color: darken($danger, 30);
+  }
+
+  &__success {
+    @extend %alert;
+    background: lighten($success, 20);
+    border-color: $success;
+    color: darken($success, 30);
+  }
+
+  &__warning {
+    @extend %alert;
+    background: lighten($warning, 20);
+    border-color: $warning;
+    color: darken($warning, 30);
+  }
+
+  &__info {
+    @extend %alert;
+    background: lighten($info, 20);
+    border-color: $info;
+    color: darken($info, 30);
+  }
+}

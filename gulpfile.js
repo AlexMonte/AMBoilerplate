@@ -13,60 +13,60 @@ const browsersync = require('browser-sync').create();
 const reload = browsersync.reload;
 
 let src = './src/',
-    srcjs = src + 'js/',
-    srcscss = src + 'sass/',
-    root = './app/',
-    scss = root + 'css/',
-    js   = root + 'javascript/';
+  srcjs = src + 'js/',
+  srcscss = src + 'sass/',
+  root = './app/',
+  scss = root + 'css/',
+  js = root + 'javascript/';
 
-let CSSwatch = src + 'scss/main.scss',
-    HTMLwatch= root + '*.html'
-    JSwatch  = [
-      srcjs + 'app.js'
-    ];
+let CSSwatch = src + 'scss/index.scss',
+  HTMLwatch = root + '*.html'
+JSwatch = [
+  srcjs + 'app.js'
+];
 
 let imgsrc = src + "assets/images/",
-    imgdest= root + 'assets/images/' ;
+  imgdest = root + 'assets/images/';
 
 function css() {
-  return gulp.src([srcscss + 'main.scss'])
-  .pipe(sourcemaps.init({loadMaps:true, largeFile:true}))
-  .pipe(sass({
-    outputStyle: 'expanded'
-  }).on('error', sass.logError))
-  .pipe(autoprefixer('last 2 versions'))
-  .pipe(sourcemaps.write())
-  .pipe(lineec())
-  .pipe(gulp.dest(scss + '/DEBUG/'))
+  return gulp.src([srcscss + 'index.scss'])
+    .pipe(sourcemaps.init({ loadMaps: true, largeFile: true }))
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }).on('error', sass.logError))
+    .pipe(autoprefixer('last 2 versions'))
+    .pipe(sourcemaps.write())
+    .pipe(lineec())
+    .pipe(gulp.dest(scss + '/DEBUG/'))
 }
- function cssConcat(){
-   return gulp.src(scss + '/DEBUG/main.css')
-   .pipe(sourcemaps.init({loadMaps:true, largeFile:true}))
-   .pipe(concat('main.min.css'))
-   .pipe(cleanCSS())
-   .pipe(sourcemaps.write('./maps/'))
-   .pipe(lineec())
-   .pipe(gulp.dest(scss))
-   .pipe(browsersync.stream());
- }
+function cssConcat() {
+  return gulp.src(scss + '/DEBUG/index.css')
+    .pipe(sourcemaps.init({ loadMaps: true, largeFile: true }))
+    .pipe(concat('index.min.css'))
+    .pipe(cleanCSS())
+    .pipe(sourcemaps.write('./maps/'))
+    .pipe(lineec())
+    .pipe(gulp.dest(scss))
+    .pipe(browsersync.stream());
+}
 
-function javascript(){
+function javascript() {
   return gulp.src(JSwatch)
-  .pipe(concat('app.js'))
-  .pipe(uglify())
-  .pipe(lineec())
-  .pipe(gulp.dest(js));
+    .pipe(concat('app.js'))
+    .pipe(uglify())
+    .pipe(lineec())
+    .pipe(gulp.dest(js));
 }
 
 function imgmin() {
   return gulp.src(imgsrc)
-  .pipe(changed(imgdest))
-  .pipe(imagemin([
-    imagemin.gifsicle({interlaced:true}),
-    imagemin.jpegtran({progressive:true}),
-    imagemin.optipng({optimizationLevel:5})
-  ]))
-  .pipe(gulp.dest(imgdest));
+    .pipe(changed(imgdest))
+    .pipe(imagemin([
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.jpegtran({ progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 })
+    ]))
+    .pipe(gulp.dest(imgdest));
 }
 
 function watch() {
@@ -74,15 +74,16 @@ function watch() {
     open: false,
     port: 8080,
     server: {
-      baseDir:'./app',
-      index: 'index.html'}
-     
+      baseDir: './app',
+      index: 'index.html'
+    }
+
   });
-  gulp.watch(srcscss, gulp.series([css,cssConcat]));
+  gulp.watch(srcscss, gulp.series([css, cssConcat]));
   gulp.watch(srcjs, javascript);
   gulp.watch(imgsrc, imgmin);
-  gulp.watch([HTMLwatch, js + 'app.js', scss + 'main.min.css']).on('change', reload);
-} 
+  gulp.watch([HTMLwatch, js + 'app.js', scss + 'index.min.css']).on('change', reload);
+}
 
 exports.css = css;
 exports.cssConcat = cssConcat;

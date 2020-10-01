@@ -1,0 +1,9 @@
+.media {
+  @include container-create();
+
+  &_img {
+  }
+
+  &_content {
+  }
+}

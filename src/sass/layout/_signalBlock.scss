@@ -1,0 +1,11 @@
+%signalBlock {
+  @extend .block;
+
+  border-left: 3px solid;
+  margin-bottom: $padding-bottom;
+  padding: 10px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
